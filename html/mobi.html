@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BWP Test</title>
+</head>
+<body>
+<h1>Welcome to Mobi Test</h1>
+<h2 id="browser">Current Browser: </h2>
+<h2>BWP Link</h2>
+<a href="https://redirect.ackapp.com/" id="bwm-link">Buy with Mobi</a>
+<form action="https://redirect.ackapp.com/button" target="bwp_container" method="post" id="bwp_form"></form>
+<h2>Load through iFrame POST</h2>
+<iframe name="bwp_container" sandbox="allow-scripts allow-popups allow-same-origin" width="500px" height="500px" src="https://redirect.ackapp.com/button"></iframe>
+
+<script src="https://redirect.ackapp.com/javascripts/bwcheck.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://redirect.ackapp.com/javascripts/script.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#bwp_form").submit()
+    })
+
+
+</script>
+</body>
+</html>
