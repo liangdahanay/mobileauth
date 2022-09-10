@@ -352,7 +352,9 @@
         }
 
         static isAndroidSupported() {
-            if ((typeof window.MAPAndroidJSBridge !== 'undefined' && typeof window.MAPAndroidJSBridge.getMAPAndroidBridgeVersion !== 'undefined') || (typeof window.FidoAuthenticatorJSBridge !== 'undefined' && typeof window.FidoAuthenticatorJSBridge.getCurrentAppInfo !== 'undefined')) {
+            if ((typeof window.MAPAndroidJSBridge !== 'undefined' && typeof window.MAPAndroidJSBridge.getMAPAndroidBridgeVersion !== 'undefined') 
+            || (typeof window.FidoAuthenticatorJSBridge !== 'undefined' && typeof window.FidoAuthenticatorJSBridge.getCurrentAppInfo !== 'undefined')
+            || (typeof window.APPToBrowserSSOJSBridge !== 'undefined')) {
                 return true;
             }
             return false;
