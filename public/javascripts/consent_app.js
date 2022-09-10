@@ -114,7 +114,7 @@ function getCurrentAppInfo(callback){
 function getAuthCode(directedId, authChallenge, callback){
     try{
         pushLogs(`JS Function Called: getAuthCode(${directedId}, ${authChallenge})`)
-        MAPWebAssets.getAuthCode((directedId, authChallenge, result) => {
+        MAPWebAssets.getAuthCode(directedId, authChallenge, (result) => {
             if (!handleError(result)){
                 if(result.authCode){
                     pushLogs(`AuthCode Get: ${result.authCode}`)
