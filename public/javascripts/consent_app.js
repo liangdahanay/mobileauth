@@ -19,7 +19,7 @@ function startAuth (){
         pushLogs(`JS Function Called: startAuth()`)
         getCurrentAccount((directedId, name, accountPool) => {
             if (directedId && name && accountPool){
-                getAuthCode(directedId, null, (authCode) => {
+                getAuthCode(directedId, MAPParams[URL_KEY_IDENTITY_SSO_CODE_CHALLENGE], (authCode) => {
                     if(authCode){
                         openURLInBrowserWithAuth(authCode, () => {
 
@@ -57,7 +57,7 @@ function constructURL(authCode){
     try {
         if(!authCode) throw new Error("No Auth Code")
         if(!MAPParams[URL_KEY_IDENTITY_SSO_CODE_CHALLENGE]) throw new Error("No URL_KEY_IDENTITY_SSO_CODE_CHALLENGE")
-        pushLogs(`Constructing return URL ${url}`)
+        pushLogs(`Constructing return URL`)
         if (MAPParams && MAPParams.return_url) {
             let connector = MAPParams.return_url.includes("?") ? "&" : "?"
             let url = `${MAPParams.return_url}${connector}${URL_KEY_IDENTITY_SSO_AUTH_CODE}=${authCode}&${URL_KEY_IDENTITY_SSO_CODE_CHALLENGE}=${MAPParams[URL_KEY_IDENTITY_SSO_CODE_CHALLENGE]}&${URL_KEY_IDENTITY_SSO_RETURN_FROM_APP}=true`
