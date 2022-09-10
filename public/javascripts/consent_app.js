@@ -141,11 +141,11 @@ function getCurrentAccount(callback){
                     if(item.isCurrentAccount){
                         pushLogs(`Current Account Found: ${JSON.stringify(item)}`)
                         callback(item.directedId, item.name, item.accountPool)
+                        return;
                     }
                 }
                 callback(result)
             }
-
         }, 1000)
     }   catch (e){
         handleError({error: e.message})
