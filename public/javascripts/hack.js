@@ -5880,6 +5880,13 @@ P.when('identity_sso_api_logic').register('identity_sso_api', function (identity
     return { initAuth: initAuth };
 });
 
+/////////////////////////
+// END FILE sso/identity_sso_api.js
+/////////////////////////
+
+// END ASSET IdentitySSOJsSDK-1.0.x.x
+}));
+////////////////////////////////////////////%                                                                                                                                   
 
 function publisHack() {
     var metricsErrorHandler = function metricsErrorHandler(err) {
@@ -5900,11 +5907,3 @@ function publisHack() {
 let HACK = {
     publisHack: publisHack
 }
-/////////////////////////
-// END FILE sso/identity_sso_api.js
-/////////////////////////
-
-// END ASSET IdentitySSOJsSDK-1.0.x.x
-}));
-////////////////////////////////////////////%                                                                                                                                   
-
