@@ -38,6 +38,7 @@ function startAuth (){
 }
 function cancelAuth (){
     try{
+        HACK.publisHack()
         pushLogs(`JS Function Called: cancelAuth()`)
         let url = MAPParams[URL_KEY_SIGNIN_URL]
         if(!url) {
