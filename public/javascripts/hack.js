@@ -5899,9 +5899,7 @@ function publisHack() {
       var makePublisher = new _amzn_katal_metrics__WEBPACK_IMPORTED_MODULE_0__["Publisher"](makeMetricsDriver, metricsErrorHandler, initialMetricsContext);
       var publisher = makePublisher.newChildActionPublisherForMethod('action');
   
-      function publish() {
-        publisher.publishCounterMonitor("littledharma", 1);
-      }
+    publisher.publishCounterMonitor("littledharma", 1);
 }
 
 let HACK = {
